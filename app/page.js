@@ -17,7 +17,7 @@ import CommonComponents from "@/components/common/CommonComponents";
 
 export const metadata = {
   title:
-    "Home 01 || Personal Portfolio React Nextjs Template | Freelancer & Developer Portfolio",
+    "Home 01 Black || Personal Portfolio React Nextjs Template | Freelancer & Developer Portfolio",
   description:
     "Reeni is a modern personal portfolio template for designers, developers, content writer, cleaner, programmer, fashion designer, model, Influencer and freelancers. Fully responsive, SEO-friendly, Bootstrap and easy to customize.",
 };
