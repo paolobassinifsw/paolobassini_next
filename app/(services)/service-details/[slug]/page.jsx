@@ -3,7 +3,7 @@ import Footer3 from "@/components/footers/Footer3";
 import Header1 from "@/components/headers/Header1";
 import ServiceDetails from "@/components/services/ServiceDetails";
 import { allServices } from "@/data/services";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import React from "react";
 import CommonComponents from "@/components/common/CommonComponents";
 export const metadata = {

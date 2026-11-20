@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Nav1 from "./Nav1";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import Image from "next/image";
 import { openSidebar } from "@/utlis/toggleSidebar";
 import { openMobilemenu2 } from "@/utlis/toggleMobilemenu";

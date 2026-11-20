@@ -3,7 +3,7 @@ import { useTranslator } from "@/i18n/LocaleProvider";
 import Image from "next/image";
 
 import { closeDemoModal } from "@/utlis/toggleDemoModal";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import { useEffect, useRef } from "react";
 import { demoData, whiteDemoData } from "@/data/menu";
 import { usePathname } from "next/navigation";

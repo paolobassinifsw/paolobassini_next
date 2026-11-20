@@ -1,12 +1,13 @@
 "use client";
 import { useTranslator } from "@/i18n/LocaleProvider";
 import React from "react";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import { menuItems, menuItemsLight } from "@/data/menu";
+import { stripPathLocale } from "@/i18n/paths";
 import { usePathname } from "next/navigation";
 export default function Nav1() {
   const t = useTranslator();
-  const pathname = usePathname();
+  const pathname = stripPathLocale(usePathname());
   // menu-item-open
   return (
     <>

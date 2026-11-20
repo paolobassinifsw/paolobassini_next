@@ -3,7 +3,7 @@ import Footer3 from "@/components/footers/Footer3";
 import Header1 from "@/components/headers/Header1";
 import ProjectDetails from "@/components/projects/ProjectDetails";
 import { allPortfolioItems } from "@/data/portfolio";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import React from "react";
 import CommonComponents from "@/components/common/CommonComponents";
 export const metadata = {

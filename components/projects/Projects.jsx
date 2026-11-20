@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import { portfolioItems12 } from "@/data/portfolio";
 
 export default function Projects({ isLight = false }) {

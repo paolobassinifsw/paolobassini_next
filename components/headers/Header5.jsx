@@ -1,6 +1,6 @@
 "use client";
 import { openMobilemenu2 } from "@/utlis/toggleMobilemenu";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import React from "react";
 
 export default function Header5() {

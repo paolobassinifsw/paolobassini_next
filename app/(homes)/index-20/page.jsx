@@ -6,7 +6,7 @@ import Resume from "@/components/common/Resume";
 import Footer4 from "@/components/footers/Footer4";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import Hero from "@/components/homes/home-20/Hero";
 export const metadata = {
   title:

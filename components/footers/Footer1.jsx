@@ -1,7 +1,7 @@
 "use client";
 import { useTranslator } from "@/i18n/LocaleProvider";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import Demomodal from "../modals/Demomodal";
 import Chat from "../common/Chat";
 import DemoToggler from "../common/DemoToggler";

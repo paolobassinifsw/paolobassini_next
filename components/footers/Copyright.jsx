@@ -1,6 +1,6 @@
 import { getTranslator } from "@/i18n/server";
 import React from "react";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 export default async function Copyright() {
   const t = await getTranslator();
   return (

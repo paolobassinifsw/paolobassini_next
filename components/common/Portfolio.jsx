@@ -1,7 +1,7 @@
 "use client";
 import { useTranslator } from "@/i18n/LocaleProvider";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import { portfolioItems } from "@/data/portfolio";
 import { useEffect, useState } from "react";
 

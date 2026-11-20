@@ -3,7 +3,7 @@ import Image from "next/image";
 import { blogData } from "@/data/blogs";
 import BlogSidebar from "./BlogSidebar";
 
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 export default function Blogs({ allBlogs = blogData, isLight = false }) {
   return (
     <div className="blog-classic-area-wrapper tmp-section-gap">

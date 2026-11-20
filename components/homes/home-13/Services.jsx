@@ -2,7 +2,7 @@ import React from "react";
 
 import { services3 } from "@/data/services";
 
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 
 export default function Services({ isLight = false }) {
   return (

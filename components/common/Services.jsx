@@ -3,7 +3,7 @@ import React from "react";
 
 import { services } from "@/data/services";
 
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 export default async function Services({ isLight = false }) {
   const t = await getTranslator();
   return (

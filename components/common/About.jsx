@@ -1,7 +1,7 @@
 import { getTranslator } from "@/i18n/server";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import OdometerComponent from "./OdometerComponent";
 export default async function About({ parentClass = "about-us-area" }) {
   const t = await getTranslator();

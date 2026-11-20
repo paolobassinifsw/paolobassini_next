@@ -4,7 +4,7 @@ import React from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Nav1 from "./Nav1";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import { openSidebar } from "@/utlis/toggleSidebar";
 import { openMobilemenu } from "@/utlis/toggleMobilemenu";
 export default function Header1({

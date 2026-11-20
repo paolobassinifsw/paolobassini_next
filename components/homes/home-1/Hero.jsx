@@ -1,7 +1,7 @@
 import { getTranslator } from "@/i18n/server";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import TyperComponent from "@/components/common/TyperComponent";
 export default async function Hero() {
   const t = await getTranslator();

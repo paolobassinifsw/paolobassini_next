@@ -3,6 +3,8 @@
 import { useLocale } from "@/i18n/LocaleProvider";
 import { localeCookie, locales, resolveLocale } from "@/i18n/locales";
 
+import { localizePath } from "@/i18n/paths";
+
 export default function LanguageSwitcher() {
   const locale = useLocale();
 
@@ -11,7 +13,8 @@ export default function LanguageSwitcher() {
     const secure = window.location.protocol === "https:" ? "; Secure" : "";
 
     document.cookie = `${localeCookie}=${language}; Path=/; Max-Age=31536000; SameSite=Lax${secure}`;
-    window.location.reload();
+    const { pathname, search, hash } = window.location;
+    window.location.assign(localizePath(pathname, language) + search + hash);
   }
 
   return (
