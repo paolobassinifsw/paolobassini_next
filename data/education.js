@@ -1,30 +1,27 @@
+import { englishCopy } from "@/i18n/englishCopy";
 export const educationExperienceData = [
   {
-    role: "Trainer Marketing",
+    ...englishCopy({ role: "education.training.marketing" }),
     duration: "2005-2009",
-    description:
-      "A personal portfolio is a curated collection of an individual's professional work, showcasing their skills, experience A personal portfolio.",
+    ...englishCopy({ description: "education.training.marketingDescription" }),
     animationOrder: 1,
   },
   {
-    role: "Assistant Director",
+    ...englishCopy({ role: "education.training.direction" }),
     duration: "2010-2014",
-    description:
-      "Each project here showcases my commitment to excellence and adaptability, tailored to meet each client’s unique needs.",
+    ...englishCopy({ description: "education.training.directionDescription" }),
     animationOrder: 2,
   },
   {
-    role: "Design Assistant",
+    ...englishCopy({ role: "education.training.design" }),
     duration: "2008-2012",
-    description:
-      "I’ve had the privilege of working with various clients, from startups to established companies, helping bring their visions to life.",
+    ...englishCopy({ description: "education.training.designDescription" }),
     animationOrder: 3,
   },
   {
-    role: "Design Assistant",
+    ...englishCopy({ role: "education.training.design" }),
     duration: "2008-2012",
-    description:
-      "Each project here showcases my commitment to excellence and adaptability, tailored to meet each client’s unique needs a personal.",
+    ...englishCopy({ description: "education.training.designSecondDescription" }),
     animationOrder: 4,
   },
 ];

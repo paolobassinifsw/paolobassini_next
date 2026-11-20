@@ -1,29 +1,27 @@
+import { englishCopy } from "@/i18n/englishCopy";
 export const expertiseItems = [
   {
     icon: "/assets/images/my-expertise/logo-4.svg",
-    title: "Ui/visual Design",
+    ...englishCopy({ title: "shared.visualDesign" }),
     percentage: "90%",
     counterValue: 90,
-    description:
-      "A personal portfolio is a curated collection of an individual's professional work, showcasing their skills",
+    ...englishCopy({ description: "expertise.visual.description" }),
     animationOrder: 1,
   },
   {
     icon: "/assets/images/my-expertise/logo-5.svg",
-    title: "Branding Design",
+    ...englishCopy({ title: "expertise.branding.title" }),
     percentage: "75%",
     counterValue: 75,
-    description:
-      "I specialize in creating solutions that are not only visually engaging but also align with business goals",
+    ...englishCopy({ description: "expertise.branding.description" }),
     animationOrder: 2,
   },
   {
     icon: "/assets/images/my-expertise/logo-6.svg",
-    title: "Motion Design",
+    ...englishCopy({ title: "shared.motionDesign" }),
     percentage: "80%",
     counterValue: 80,
-    description:
-      "Each one showcases my approach and dedication to detail, creativity, and results-driven outcomes.",
+    ...englishCopy({ description: "expertise.motion.description" }),
     animationOrder: 3,
   },
 ];

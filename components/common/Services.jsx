@@ -24,10 +24,10 @@ export default async function Services({ isLight = false }) {
                       service.slug
                     }`}
                   >
-                    {t(service.title)}
+                    {t(service.titleKey)}
                   </Link>
                 </h4>
-                <p className="service-para">{t(service.projects)}</p>
+                <p className="service-para">{t(service.projectsKey)}</p>
               </div>
             </div>
           ))}

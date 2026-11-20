@@ -13,14 +13,14 @@ export default function Sidebar() {
             <a href="index.html" className="logo">
               <img
                 className="logo-dark"
-                alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
+                alt={t("shared.logoAlt")}
                 src="/assets/images/logo/white-logo-reeni.png"
                 width={121}
                 height={41}
               />
               <img
                 className="logo-white"
-                alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
+                alt={t("shared.logoAlt")}
                 src="/assets/images/logo/logo-white.png"
                 width={121}
                 height={40}
@@ -39,7 +39,7 @@ export default function Sidebar() {
             <div className="image-area-feature">
               <a href="index.html">
                 <img
-                  alt={t("personal-logo")}
+                  alt={t("sidebar.imageAlt")}
                   src="/assets/images/logo/man.png"
                   width={340}
                   height={196}
@@ -47,17 +47,17 @@ export default function Sidebar() {
               </a>
             </div>
             <h5 className="title mt--30">
-              {t("Freelancer delivering exceptional Webflow, and Next.js solutions.")}
+              {t("sidebar.title")}
             </h5>
             <p className="disc">
-              {t("I am a skilled freelancer specializing in Webflow development, Figma design, and Next.js projects. I deliver creative, dynamic, and user-centric web solutions.")}
+              {t("sidebar.description")}
             </p>
             <div className="short-contact-area">
               {/* single contact information */}
               <div className="single-contact">
                 <i className="fa-solid fa-phone" />
                 <div className="information tmp-link-animation">
-                  <span>{t("Call Now")}</span>
+                  <span>{t("sidebar.call")}</span>
                   <a href="#" className="number">
                     +92 (8800) - 98670
                   </a>
@@ -68,7 +68,7 @@ export default function Sidebar() {
               <div className="single-contact">
                 <i className="fa-solid fa-envelope" />
                 <div className="information tmp-link-animation">
-                  <span>{t("Mail Us")}</span>
+                  <span>{t("sidebar.mail")}</span>
                   <a href="#" className="number">
                     example@info.com
                   </a>
@@ -79,7 +79,7 @@ export default function Sidebar() {
               <div className="single-contact">
                 <i className="fa-solid fa-location-crosshairs" />
                 <div className="information tmp-link-animation">
-                  <span>{t("My Address")}</span>
+                  <span>{t("sidebar.address")}</span>
                   <span className="number">66 Broklyant, New York 3269</span>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function Sidebar() {
             </div>
             {/* social area start */}
             <div className="social-wrapper mt--20">
-              <span className="subtitle">{t("find with me")}</span>
+              <span className="subtitle">{t("shared.follow")}</span>
               <div className="social-link">
                 <a href="#">
                   <i className="fa-brands fa-instagram" />

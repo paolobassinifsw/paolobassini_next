@@ -15,7 +15,7 @@ export default async function About({ parentClass = "about-us-area" }) {
                 <h2 className="counter card-title">
                   <OdometerComponent max={10} /> +
                 </h2>
-                <p className="card-para">{t("years of experience")}</p>
+                <p className="card-para">{t("about.yearsOfExperience")}</p>
               </div>
               <div className="design-card tmp-scroll-trigger tmp-fade-in animation-order-2">
                 <div className="design-card-img">
@@ -24,8 +24,8 @@ export default async function About({ parentClass = "about-us-area" }) {
                   </div>
                 </div>
                 <div className="card-info">
-                  <h3 className="card-title">{t("Ui/Ux Design")}</h3>
-                  <p className="card-para">{t("241 Projects")}</p>
+                  <h3 className="card-title">{t("about.designTitle")}</h3>
+                  <p className="card-para">{t("about.projectCount")}</p>
                 </div>
               </div>
             </div>
@@ -34,14 +34,14 @@ export default async function About({ parentClass = "about-us-area" }) {
             <div className="about-us-right-content-wrap">
               <div className="section-head text-align-left mb--50">
                 <div className="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-                  <span className="subtitle">{t("About Me")}</span>
+                  <span className="subtitle">{t("about.eyebrow")}</span>
                 </div>
                 <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-                  {t("Boost Business Strategic") + " "} <br />
-                  {t("Solutions with Us")}
+                  {t("about.titleStart") + " "} <br />
+                  {t("about.titleEnd")}
                 </h2>
                 <p className="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                  {t("Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational")}
+                  {t("about.description")}
                 </p>
               </div>
               <div className="about-us-section-card row g-5">
@@ -56,10 +56,10 @@ export default async function About({ parentClass = "about-us-area" }) {
                           height={24}
                         />
                       </div>
-                      <h3 className="card-title">{t("Business Solutions")}</h3>
+                      <h3 className="card-title">{t("about.solutions.title")}</h3>
                     </div>
                     <p className="card-para">
-                      {t("Each one showcases my approach and dedication to detail, creativity")}
+                      {t("about.solutions.description")}
                     </p>
                   </div>
                 </div>
@@ -74,10 +74,10 @@ export default async function About({ parentClass = "about-us-area" }) {
                           height={24}
                         />
                       </div>
-                      <h3 className="card-title">{t("Profit Partners")}</h3>
+                      <h3 className="card-title">{t("about.partners.title")}</h3>
                     </div>
                     <p className="card-para">
-                      {t("Business consulting consul us to a provide expert advice businesses")}
+                      {t("about.partners.description")}
                     </p>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ export default async function About({ parentClass = "about-us-area" }) {
                   href={`/about`}
                 >
                   <span className="icon-reverse-wrapper">
-                    <span className="btn-text">{t("Read More About Me")}</span>
+                    <span className="btn-text">{t("about.readMore")}</span>
                     <span className="btn-icon">
                       <i className="fa-sharp fa-regular fa-arrow-right" />
                     </span>

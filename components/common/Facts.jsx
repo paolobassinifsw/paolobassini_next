@@ -17,12 +17,12 @@ export default async function Facts() {
                   <OdometerComponent max={25} />
                 </h2>
                 <h3 className="year-title">
-                  {t("Years Of") + " "} <br />
-                  {t("experience")}
+                  {t("facts.yearsTitle") + " "} <br />
+                  {t("education.experienceLabel")}
                 </h3>
               </div>
               <p className="year-para">
-                {t("Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency")}
+                {t("shared.efficiencyDescription")}
               </p>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default async function Facts() {
                         <OdometerComponent max={item.count} />
                         {item.suffix}
                       </h3>
-                      <p className="counter-para">{t(item.text)}</p>
+                      <p className="counter-para">{t(item.textKey)}</p>
                     </div>
                   </div>
                 ))}

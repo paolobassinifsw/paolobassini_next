@@ -1,40 +1,40 @@
+import { englishCopy } from "@/i18n/englishCopy";
 import { slugify } from "@/utlis/slugify";
 
 export const services = [
   {
     id: 1,
     icon: "fa-light fa-pen-ruler",
-    title: "Web Design",
-    projects: "120 Projects",
+    ...englishCopy({ title: "services.cards.webDesign.title" }),
+    slug: "web-design",
+    ...englishCopy({ projects: "services.cards.webDesign.projects" }),
     animationOrder: "1",
   },
   {
     id: 2,
     icon: "fa-light fa-bezier-curve",
-    title: "Ui/Ux Design",
-    projects: "241 Projects",
+    ...englishCopy({ title: "about.designTitle" }),
+    slug: "uiux-design",
+    ...englishCopy({ projects: "about.projectCount" }),
     animationOrder: "2",
   },
   {
     id: 3,
     icon: "fa-light fa-lightbulb",
-    title: "Web Research",
-    projects: "240 Projects",
+    ...englishCopy({ title: "services.cards.webResearch.title" }),
+    slug: "web-research",
+    ...englishCopy({ projects: "services.cards.webResearch.projects" }),
     animationOrder: "3",
   },
   {
     id: 4,
     icon: "fa-light fa-envelope",
-    title: "Marketing",
-    projects: "331 Prodect",
+    ...englishCopy({ title: "shared.marketing" }),
+    slug: "marketing",
+    ...englishCopy({ projects: "services.cards.marketing.projects" }),
     animationOrder: "4",
   },
-].map((elm) => {
-  return {
-    ...elm,
-    slug: slugify(elm.title),
-  };
-});
+];
 
 export const services2 = [
   {
@@ -215,19 +215,16 @@ export const serviceCards = [
 
 export const services5 = [
   {
-    title: "A Portfolio of Creativity",
-    description:
-      "Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency",
+    ...englishCopy({ title: "services.latest.creativity.title" }),
+    ...englishCopy({ description: "shared.efficiencyDescription" }),
   },
   {
-    title: "My Portfolio of Innovation",
-    description:
-      "My work is driven by the belief that thoughtful design and strategic planning can empower brands, transform businesses",
+    ...englishCopy({ title: "services.latest.innovation.title" }),
+    ...englishCopy({ description: "services.latest.innovation.description" }),
   },
   {
-    title: "A Showcase of My Projects",
-    description:
-      "In this portfolio, you’ll find a curated selection of projects that highlight my skills in [Main Areas, e.g., responsive web design",
+    ...englishCopy({ title: "services.latest.showcase.title" }),
+    ...englishCopy({ description: "shared.portfolioSelection" }),
   },
 ];
 export const serviceCards2 = [

@@ -9,14 +9,14 @@ export default async function Services3() {
       <div className="container">
         <div className="section-head mb--50">
           <div className="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-            <span className="subtitle">{t("Latest Service")}</span>
+            <span className="subtitle">{t("services.eyebrow")}</span>
           </div>
           <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-            {t("Inspiring The World One") + " "} <br />
-            {t("Project")}
+            {t("services.titleStart") + " "} <br />
+            {t("services.titleEnd")}
           </h2>
           <p className="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">
-            {t("Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational")}
+            {t("services.description")}
           </p>
         </div>
         <div className="row">
@@ -30,9 +30,9 @@ export default async function Services3() {
               >
                 <h2 className="service-card-num">
                   <span>{`0${index + 1}.`}</span>
-                  {t(service.title)}
+                  {t(service.titleKey)}
                 </h2>
-                <p className="service-para">{t(service.description)}</p>
+                <p className="service-para">{t(service.descriptionKey)}</p>
               </div>
             ))}
           </div>
@@ -40,7 +40,7 @@ export default async function Services3() {
             <div className="service-card-user-image">
               <Image
                 className="tmp-scroll-trigger tmp-zoom-in animation-order-1"
-                alt={t("latest-user-image")}
+                alt={t("services.imageAlt")}
                 src="/assets/images/services/latest-services-user-image-two.png"
                 width={1134}
                 height={1176}

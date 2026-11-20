@@ -1,3 +1,5 @@
+import english from "@/i18n/en.json";
+import { englishCopy } from "@/i18n/englishCopy";
 import { slugify } from "@/utlis/slugify";
 
 export const portfolioItems = [
@@ -7,9 +9,10 @@ export const portfolioItems = [
     imageSrc: "/assets/images/latest-portfolio/portfoli-img-1.jpg",
     width: 1920,
     height: 1572,
-    title: "SAAS website design",
-    tags: ["Figma", "Figma"],
-    categories: ["Design", "Content writing", "Marketing"],
+    ...englishCopy({ title: "portfolio.projects.saas" }),
+    slug: "saas-website-design",
+    tagKeys: ["portfolio.tags.figma", "portfolio.tags.figma"],
+    categories: ["design", "contentWriting", "marketing"],
   },
   {
     id: 2,
@@ -17,9 +20,10 @@ export const portfolioItems = [
     imageSrc: "/assets/images/latest-portfolio/portfoli-img-3.jpg",
     width: 1939,
     height: 1572,
-    title: "Workout App design",
-    tags: ["Adobe", "Webflow", "Ai"],
-    categories: ["Branding", "Content writing", "Marketing"],
+    ...englishCopy({ title: "portfolio.projects.workout" }),
+    slug: "workout-app-design",
+    tagKeys: ["portfolio.tags.adobe", "portfolio.tags.webflow", "portfolio.tags.ai"],
+    categories: ["branding", "contentWriting", "marketing"],
   },
   {
     id: 3,
@@ -27,9 +31,10 @@ export const portfolioItems = [
     imageSrc: "/assets/images/latest-portfolio/portfoli-img-4.jpg",
     width: 1939,
     height: 1572,
-    title: "Workout App design",
-    tags: ["Figma", "Framer", "Wordpress"],
-    categories: ["Branding", "Design", "Marketing"],
+    ...englishCopy({ title: "portfolio.projects.workout" }),
+    slug: "workout-app-design",
+    tagKeys: ["portfolio.tags.figma", "portfolio.tags.framer", "portfolio.tags.wordpress"],
+    categories: ["branding", "design", "marketing"],
   },
   {
     id: 4,
@@ -37,16 +42,15 @@ export const portfolioItems = [
     imageSrc: "/assets/images/latest-portfolio/portfoli-img-2.jpg",
     width: 1939,
     height: 1572,
-    title: "Dashboard design",
-    tags: ["Adobe", "Webflow"],
-    categories: ["Branding", "Design", "Content writing"],
+    ...englishCopy({ title: "portfolio.projects.dashboard" }),
+    slug: "dashboard-design",
+    tagKeys: ["portfolio.tags.adobe", "portfolio.tags.webflow"],
+    categories: ["branding", "design", "contentWriting"],
   },
-].map((elm) => {
-  return {
-    ...elm,
-    slug: slugify(elm.title),
-  };
-});
+].map((item) => ({
+  ...item,
+  tags: item.tagKeys.map((key) => english[key]),
+}));
 
 export const portfolioItems2 = [
   {
@@ -572,4 +576,12 @@ export const allPortfolioItems = [
   ...portfolioItems10,
   ...portfolioItems11,
   ...portfolioItems12,
+];
+
+export const portfolioFilters = [
+  "all",
+  "branding",
+  "design",
+  "contentWriting",
+  "marketing",
 ];

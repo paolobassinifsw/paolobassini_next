@@ -14,11 +14,11 @@ export default async function Blogs({
       <div className="container">
         <div className="section-head mb--60">
           <div className="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-            <span className="subtitle">{t("Blog and news")}</span>
+            <span className="subtitle">{t("blog.eyebrow")}</span>
           </div>
           <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-            {t("Elevating Personal Branding the") + " "} <br />
-            {t("through Powerful Portfolios")}
+            {t("blog.titleStart") + " "} <br />
+            {t("blog.titleEnd")}
           </h2>
         </div>
         <div className="row">
@@ -36,7 +36,7 @@ export default async function Blogs({
                     >
                       <Image
                         className="w-100"
-                        alt={t(blog.altText)}
+                        alt={t(blog.altTextKey)}
                         src={blog.imageSrc}
                         width={410}
                         height={294}
@@ -53,7 +53,7 @@ export default async function Blogs({
                         <span className="tag-icon">
                           <i className="fa-solid fa-calendar-days" />
                         </span>
-                        {t(blog.date)}
+                        {t(blog.dateKey)}
                       </li>
                     </ul>
                   </div>
@@ -65,7 +65,7 @@ export default async function Blogs({
                           blog.slug
                         }`}
                       >
-                        {t(blog.title)}
+                        {t(blog.titleKey)}
                       </Link>
                     </h3>
                     <div className="more-btn tmp-link-animation">
@@ -75,7 +75,7 @@ export default async function Blogs({
                         }`}
                         className="read-more-btn"
                       >
-                        {t("Read More")}
+                        {t("shared.readMore")}
                         <span className="read-more-icon">
                           <i className="fa-solid fa-angle-right" />
                         </span>

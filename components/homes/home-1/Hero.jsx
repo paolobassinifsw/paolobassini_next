@@ -14,37 +14,37 @@ export default async function Hero() {
               <div className="banner-right-content">
                 <Image
                   className="tmp-scroll-trigger tmp-zoom-in animation-order-1"
-                  alt={t("banner-img")}
+                  alt={t("hero.imageAlt")}
                   src="/assets/images/banner/banner-user-image-one.png"
                   width={486}
                   height={781}
                 />
-                <h2 className="banner-big-text-1 up-down">{t("WEB DESIGNER")}</h2>
-                <h2 className="banner-big-text-2 up-down-2">{t("WEB DESIGNER")}</h2>
+                <h2 className="banner-big-text-1 up-down">{t("hero.backgroundTitle")}</h2>
+                <h2 className="banner-big-text-2 up-down-2">{t("hero.backgroundTitle")}</h2>
               </div>
             </div>
             <div className="col-lg-6 order-lg-1">
               <div className="inner">
                 <span className="sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-                  {t("Hello")}
+                  {t("hero.greeting")}
                 </span>
                 <h1 className="title tmp-scroll-trigger tmp-fade-in animation-order-2 mt--5">
-                  {t("i’m Jane Cooper a") + " "} <br />
+                  {t("hero.intro") + " "} <br />
                   <span className="header-caption">
                     <span className="cd-headline clip is-full-width">
                       <TyperComponent
                         strings={[
-                          t("Web Designer."),
-                          t("Front-end Developer."),
-                          t("UI/UX Designer."),
-                          t("Content Creator."),
+                          t("hero.roles.webDesigner"),
+                          t("hero.roles.frontendDeveloper"),
+                          t("hero.roles.uxDesigner"),
+                          t("hero.roles.contentCreator"),
                         ]}
                       />
                     </span>
                   </span>
                 </h1>
                 <p className="disc tmp-scroll-trigger tmp-fade-in animation-order-3">
-                  {t("A personal portfolio is a collection of your work, achievements, and skills that highlights your abilities and professional growth. It serves as")}
+                  {t("hero.description")}
                 </p>
                 <div className="button-area-banner-one tmp-scroll-trigger tmp-fade-in animation-order-4">
                   <Link
@@ -52,7 +52,7 @@ export default async function Hero() {
                     href={`/project`}
                   >
                     <span className="icon-reverse-wrapper">
-                      <span className="btn-text">{t("View Portfolio")}</span>
+                      <span className="btn-text">{t("hero.viewPortfolio")}</span>
                       <span className="btn-icon">
                         <i className="fa-sharp fa-regular fa-arrow-right" />
                       </span>

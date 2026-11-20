@@ -1,3 +1,4 @@
+import { englishCopy } from "@/i18n/englishCopy";
 import { slugify } from "@/utlis/slugify";
 
 export const blogData = [
@@ -49,10 +50,11 @@ export const blogData2 = [
     id: 1,
     animationOrder: "animation-order-1",
     imageSrc: "/assets/images/blog/blog-img-1.jpg",
-    altText: "Blog Thumbnail",
+    ...englishCopy({ altText: "blog.card.imageAlt" }),
     author: "Mesbah",
-    date: "April 10",
-    title: "Inspiring the World, One Project at a Time for the man",
+    ...englishCopy({ date: "blog.card.date" }),
+    ...englishCopy({ title: "blog.card.inspiration" }),
+    slug: "inspiring-the-world-one-project-at-a-time-for-the-man",
     tags: [
       "All Project",
 
@@ -72,10 +74,11 @@ export const blogData2 = [
     id: 2,
     animationOrder: "animation-order-2",
     imageSrc: "/assets/images/blog/blog-img-2.jpg",
-    altText: "Blog Thumbnail",
+    ...englishCopy({ altText: "blog.card.imageAlt" }),
     author: "Mesbah",
-    date: "April 10",
-    title: "Let's bring your ideas to life! Contact me, and let's",
+    ...englishCopy({ date: "blog.card.date" }),
+    ...englishCopy({ title: "blog.card.ideas" }),
+    slug: "lets-bring-your-ideas-to-life-contact-me-and-lets",
     tags: ["CV", "Starts", "Start shape"],
     categories: ["Business Solution"],
     description:
@@ -85,21 +88,17 @@ export const blogData2 = [
     id: 3,
     animationOrder: "animation-order-3",
     imageSrc: "/assets/images/blog/blog-img-3.jpg",
-    altText: "Blog Thumbnail",
+    ...englishCopy({ altText: "blog.card.imageAlt" }),
     author: "Mesbah",
-    date: "April 10",
-    title: "Each one showcases our approach and dedication man",
+    ...englishCopy({ date: "blog.card.date" }),
+    ...englishCopy({ title: "blog.card.approach" }),
+    slug: "each-one-showcases-our-approach-and-dedication-man",
     tags: ["All Project", "Resume", "CV Card", "Start shape"],
     categories: ["Business Solution"],
     description:
       "Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere viverra .Aliquam eros justo, posuere Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper",
   },
-].map((elm) => {
-  return {
-    ...elm,
-    slug: slugify(elm.title),
-  };
-});
+];
 
 export const blogData3 = [
   {

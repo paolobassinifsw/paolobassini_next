@@ -44,7 +44,7 @@ export default function Demomodal() {
           <div className="demo-top text-center">
             <h4 className="title">Reeni</h4>
             <p className="subtitle">
-              {t("A personal portfolio website is your digital resume—a place to showcase your work, skills, and achievements.")}
+              {t("demo.description")}
             </p>
           </div>
           <ul
@@ -69,7 +69,7 @@ export default function Demomodal() {
                     .classList.remove("active-light");
                 }}
               >
-                {t("Dark Demo")}
+                {t("demo.dark")}
               </a>
             </li>
             <li className="nav-item">
@@ -89,7 +89,7 @@ export default function Demomodal() {
                     .classList.add("active-light");
                 }}
               >
-                {t("Light Demo")}
+                {t("demo.light")}
               </a>
             </li>
           </ul>
@@ -112,14 +112,14 @@ export default function Demomodal() {
                             <Link href={demo.href}>
                               <Image
                                 className="w-100"
-                                alt={t("Personal Portfolio")}
+                                alt={t("demo.imageAlt")}
                                 src={demo.img}
                                 width={340}
                                 height={240}
                               />
                               <span className="overlay-content">
                                 <span className="overlay-text">
-                                  {t("View Demo")}{" "}
+                                  {t("demo.view")}{" "}
                                   <i className="feather-external-link" />
                                 </span>
                               </span>
@@ -127,7 +127,7 @@ export default function Demomodal() {
                           </div>
                           <div className="inner">
                             <h3 className="title">
-                              <Link href={demo.href}>{t(demo.title)}</Link>
+                              <Link href={demo.href}>{t(demo.titleKey)}</Link>
                             </h3>
                           </div>
                         </div>
@@ -142,14 +142,14 @@ export default function Demomodal() {
                           <a href="#">
                             <Image
                               className="w-100"
-                              alt={t("Personal Portfolio")}
+                              alt={t("demo.imageAlt")}
                               src="/assets/images/demo/coming-soon.png"
                               width={340}
                               height={240}
                             />
                             <span className="overlay-content">
                               <span className="overlay-text">
-                                {t("View Demo")}{" "}
+                                {t("demo.view")}{" "}
                                 <i className="feather-external-link" />
                               </span>
                             </span>
@@ -185,14 +185,14 @@ export default function Demomodal() {
                             <Link href={demo.href}>
                               <Image
                                 className="w-100"
-                                alt={t("Personal Portfolio")}
+                                alt={t("demo.imageAlt")}
                                 src={demo.img}
                                 width={340}
                                 height={240}
                               />
                               <span className="overlay-content">
                                 <span className="overlay-text">
-                                  {t("View Demo")}{" "}
+                                  {t("demo.view")}{" "}
                                   <i className="feather-external-link" />
                                 </span>
                               </span>
@@ -200,7 +200,7 @@ export default function Demomodal() {
                           </div>
                           <div className="inner">
                             <h3 className="title">
-                              <Link href={demo.href}>{t(demo.title)}</Link>
+                              <Link href={demo.href}>{t(demo.titleKey)}</Link>
                             </h3>
                           </div>
                         </div>
@@ -215,14 +215,14 @@ export default function Demomodal() {
                           <a href="#">
                             <Image
                               className="w-100"
-                              alt={t("Personal Portfolio")}
+                              alt={t("demo.imageAlt")}
                               src="/assets/images/demo/coming-soon-white.png"
                               width={340}
                               height={240}
                             />
                             <span className="overlay-content">
                               <span className="overlay-text">
-                                {t("View Demo")}{" "}
+                                {t("demo.view")}{" "}
                                 <i className="feather-external-link" />
                               </span>
                             </span>

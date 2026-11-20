@@ -15,10 +15,10 @@ export default async function Skills({
               <div className="progress-wrapper">
                 <div className="content">
                   <h2 className="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                    {t(section.title)}
+                    {t(section.titleKey)}
                     <span>
                       <Image
-                        alt={t("custom-line")}
+                        alt={t("shared.decorativeLineAlt")}
                         src="/assets/images/custom-line/custom-line.png"
                         width={81}
                         height={6}

@@ -13,10 +13,10 @@ export default function Chat() {
         <i className="fas fa-times" />
       </label>
       <div className="wrapper">
-        <div className="head-text">{t("Let's chat with me? - Online")}</div>
+        <div className="head-text">{t("chat.title")}</div>
         <div className="chat-box">
           <div className="desc-text">
-            {t("Please fill out the form below to start chatting with me directly.")}
+            {t("chat.description")}
           </div>
           <form
             className="tmp-dynamic-form"
@@ -26,7 +26,7 @@ export default function Chat() {
               <input
                 className="input-field"
                 name="name"
-                placeholder={t("Your Name")}
+                placeholder={t("form.name")}
                 type="text"
                 required
               />
@@ -35,7 +35,7 @@ export default function Chat() {
               <input
                 className="input-field"
                 name="email"
-                placeholder={t("Your Email")}
+                placeholder={t("form.email")}
                 type="email"
                 required
               />
@@ -43,7 +43,7 @@ export default function Chat() {
             <div className="field textarea">
               <textarea
                 className="input-field"
-                placeholder={t("Your Message")}
+                placeholder={t("form.message")}
                 name="message"
                 required
                 defaultValue={""}
@@ -51,7 +51,7 @@ export default function Chat() {
             </div>
             <div className="field">
               <button name="submit" type="submit">
-                {t("Send Message")}
+                {t("chat.send")}
               </button>
             </div>
           </form>

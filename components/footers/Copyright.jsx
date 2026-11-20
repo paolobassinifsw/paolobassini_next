@@ -17,28 +17,28 @@ export default async function Copyright() {
                 >
                   Inversweb {new Date().getFullYear()}
                 </a>{" "}
-                {t("| All Rights Reserved")}
+                {t("footer.copyright")}
               </p>{" "}
               <ul className="tmp-link-animation dark-content">
                 <li>
-                  <a href="#">{t("Trams & Condition")}</a>
+                  <a href="#">{t("footer.terms")}</a>
                 </li>
                 <li>
-                  <a href="#">{t("Privacy Policy")}</a>
+                  <a href="#">{t("footer.privacy")}</a>
                 </li>
                 <li>
-                  <Link href={`/contact`}>{t("Contact Us")}</Link>
+                  <Link href={`/contact`}>{t("footer.contactUs")}</Link>
                 </li>
               </ul>
               <ul className="tmp-link-animation light-content">
                 <li>
-                  <a href="#">{t("Trams & Condition")}</a>
+                  <a href="#">{t("footer.terms")}</a>
                 </li>
                 <li>
-                  <a href="#">{t("Privacy Policy")}</a>
+                  <a href="#">{t("footer.privacy")}</a>
                 </li>
                 <li>
-                  <Link href={`/contact-white`}>{t("Contact Us")}</Link>
+                  <Link href={`/contact-white`}>{t("footer.contactUs")}</Link>
                 </li>
               </ul>
             </div>
