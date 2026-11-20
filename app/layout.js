@@ -1,12 +1,18 @@
-import "../../public/assets/scss/main.scss";
+import "../public/assets/scss/main.scss";
 import "odometer/themes/odometer-theme-default.css"; // Import theme
 import "react-toastify/dist/ReactToastify.css";
 import LayoutWrapper from "@/components/common/LayoutWrapper";
 import Script from 'next/script';
 import { ToastContainer } from "react-toastify";
-export default function SiteDocument({ children, lang }) {
+export const metadata = {
+  title:
+    "Home || Personal Portfolio React Nextjs Template | Freelancer & Developer Portfolio",
+  description:
+    "Reeni is a modern personal portfolio template for designers, developers, content writer, cleaner, programmer, fashion designer, model, Influencer and freelancers. Fully responsive, SEO-friendly, Bootstrap and easy to customize.",
+};
+export default function RootLayout({ children }) {
   return (
-    <html lang={lang}>
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -25,7 +31,7 @@ export default function SiteDocument({ children, lang }) {
       </head>
 
       <body>
-        <Script
+          <Script
           src="/assets/js/smooth.js"
           strategy="beforeInteractive"
         />
