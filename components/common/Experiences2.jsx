@@ -1,25 +1,25 @@
+import { getTranslator } from "@/i18n/server";
 import React from "react";
 import Image from "next/image";
 import { expertiseItems } from "@/data/expertise";
-export default function Experiences2() {
+export default async function Experiences2() {
+  const t = await getTranslator();
   return (
     <section className="my-expertise-area tpm-custom-box-bg">
       <div className="container">
         <div className="header-top-inner">
           <div className="section-head text-align-left">
             <div className="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-              <span className="subtitle">My Expertise</span>
+              <span className="subtitle">{t("My Expertise")}</span>
             </div>
             <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-              Elevated Designs Personalized <br />
-              the best Experiences
+              {t("Elevated Designs Personalized") + " "} <br />
+              {t("the best Experiences")}
             </h2>
           </div>
           <div className="discription-area tmp-scroll-trigger tmp-fade-in animation-order-3">
             <p className="description color-primary-3rd">
-              Business consulting consultants provide expert advice and guida
-              businesses to help them improve their performance, efficiency, and
-              organizational
+              {t("Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational")}
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Experiences2() {
                   <div className="expertise-card-logo">
                     <Image alt="logo" src={item.icon} width={45} height={45} />
                   </div>
-                  <h3 className="title">{item.title}</h3>
+                  <h3 className="title">{t(item.title)}</h3>
                 </div>
                 <div
                   className="single-progress-circle sal-animate"
@@ -67,7 +67,7 @@ export default function Experiences2() {
                     </text>
                   </svg>
                 </div>
-                <p className="para">{item.description}</p>
+                <p className="para">{t(item.description)}</p>
               </div>
               <button className="service-link modal-popup" />
             </div>

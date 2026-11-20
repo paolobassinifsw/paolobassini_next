@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import { portfolioItems11 } from "@/data/portfolio";
 import { useEffect, useState } from "react";
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { blogData7 } from "@/data/blogs";
 
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 export default function Blogs({ isLight = false }) {
   return (
     <section className="blog-and-news-are tmp-section-gap">

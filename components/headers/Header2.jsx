@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import { openMobilemenu2 } from "@/utlis/toggleMobilemenu";
 import OnepageNav from "./OnepageNav";
 export default function Header2({

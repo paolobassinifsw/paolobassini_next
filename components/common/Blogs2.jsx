@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { blogData3 } from "@/data/blogs";
 
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 export default function Blogs2({
   parentClass = "blog-and-news-are tmp-section-gap",
   isLight = false,

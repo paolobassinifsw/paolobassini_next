@@ -1,10 +1,12 @@
+import { getTranslator } from "@/i18n/server";
 import React from "react";
 import Image from "next/image";
 import { companyLogos } from "@/data/brands";
 
-export default function Brands({
+export default async function Brands({
   parentClass = "our-supported-company-area tmp-section-gapTop",
 }) {
+  const t = await getTranslator();
   return (
     <div className={parentClass} id="clients">
       <div className="container">
@@ -15,7 +17,7 @@ export default function Brands({
                 className={`support-company-logo tmp-scroll-trigger tmp-fade-in animation-order-${logo.animationOrder}`}
               >
                 <Image
-                  alt="Reeni - Personal Portfolio HTML Template"
+                  alt={t("Reeni - Personal Portfolio HTML Template")}
                   src={logo.src}
                   width={logo.width}
                   height={logo.height}

@@ -1,8 +1,10 @@
+import { getTranslator } from "@/i18n/server";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import OdometerComponent from "./OdometerComponent";
-export default function About({ parentClass = "about-us-area" }) {
+export default async function About({ parentClass = "about-us-area" }) {
+  const t = await getTranslator();
   return (
     <section className={parentClass} id="about">
       <div className="container">
@@ -13,7 +15,7 @@ export default function About({ parentClass = "about-us-area" }) {
                 <h2 className="counter card-title">
                   <OdometerComponent max={10} /> +
                 </h2>
-                <p className="card-para">years of experience</p>
+                <p className="card-para">{t("years of experience")}</p>
               </div>
               <div className="design-card tmp-scroll-trigger tmp-fade-in animation-order-2">
                 <div className="design-card-img">
@@ -22,8 +24,8 @@ export default function About({ parentClass = "about-us-area" }) {
                   </div>
                 </div>
                 <div className="card-info">
-                  <h3 className="card-title">Ui/Ux Design</h3>
-                  <p className="card-para">241 Projects</p>
+                  <h3 className="card-title">{t("Ui/Ux Design")}</h3>
+                  <p className="card-para">{t("241 Projects")}</p>
                 </div>
               </div>
             </div>
@@ -32,16 +34,14 @@ export default function About({ parentClass = "about-us-area" }) {
             <div className="about-us-right-content-wrap">
               <div className="section-head text-align-left mb--50">
                 <div className="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-                  <span className="subtitle">About Me</span>
+                  <span className="subtitle">{t("About Me")}</span>
                 </div>
                 <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-                  Boost Business Strategic <br />
-                  Solutions with Us
+                  {t("Boost Business Strategic") + " "} <br />
+                  {t("Solutions with Us")}
                 </h2>
                 <p className="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                  Business consulting consultants provide expert advice and
-                  guida businesses to help them improve their performance,
-                  efficiency, and organizational
+                  {t("Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational")}
                 </p>
               </div>
               <div className="about-us-section-card row g-5">
@@ -56,11 +56,10 @@ export default function About({ parentClass = "about-us-area" }) {
                           height={24}
                         />
                       </div>
-                      <h3 className="card-title">Business Solutions</h3>
+                      <h3 className="card-title">{t("Business Solutions")}</h3>
                     </div>
                     <p className="card-para">
-                      Each one showcases my approach and dedication to detail,
-                      creativity
+                      {t("Each one showcases my approach and dedication to detail, creativity")}
                     </p>
                   </div>
                 </div>
@@ -75,11 +74,10 @@ export default function About({ parentClass = "about-us-area" }) {
                           height={24}
                         />
                       </div>
-                      <h3 className="card-title">Profit Partners</h3>
+                      <h3 className="card-title">{t("Profit Partners")}</h3>
                     </div>
                     <p className="card-para">
-                      Business consulting consul us to a provide expert advice
-                      businesses
+                      {t("Business consulting consul us to a provide expert advice businesses")}
                     </p>
                   </div>
                 </div>
@@ -90,7 +88,7 @@ export default function About({ parentClass = "about-us-area" }) {
                   href={`/about`}
                 >
                   <span className="icon-reverse-wrapper">
-                    <span className="btn-text">Read More About Me</span>
+                    <span className="btn-text">{t("Read More About Me")}</span>
                     <span className="btn-icon">
                       <i className="fa-sharp fa-regular fa-arrow-right" />
                     </span>

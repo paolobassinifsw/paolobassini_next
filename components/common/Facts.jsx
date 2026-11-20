@@ -1,8 +1,10 @@
+import { getTranslator } from "@/i18n/server";
 import React from "react";
 import OdometerComponent from "./OdometerComponent";
 import { counters } from "@/data/facts";
 
-export default function Facts() {
+export default async function Facts() {
+  const t = await getTranslator();
   return (
     <section className="counter-area">
       <div className="container">
@@ -15,13 +17,12 @@ export default function Facts() {
                   <OdometerComponent max={25} />
                 </h2>
                 <h3 className="year-title">
-                  Years Of <br />
-                  experience
+                  {t("Years Of") + " "} <br />
+                  {t("experience")}
                 </h3>
               </div>
               <p className="year-para">
-                Business consulting consultants provide expert advice and guida
-                the a businesses to help theme their performance efficiency
+                {t("Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency")}
               </p>
             </div>
           </div>
@@ -37,7 +38,7 @@ export default function Facts() {
                         <OdometerComponent max={item.count} />
                         {item.suffix}
                       </h3>
-                      <p className="counter-para">{item.text}</p>
+                      <p className="counter-para">{t(item.text)}</p>
                     </div>
                   </div>
                 ))}

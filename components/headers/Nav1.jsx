@@ -1,10 +1,13 @@
 "use client";
+import { useTranslator } from "@/i18n/LocaleProvider";
 import React from "react";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import { menuItems, menuItemsLight } from "@/data/menu";
+import { stripPathLocale } from "@/i18n/paths";
 import { usePathname } from "next/navigation";
 export default function Nav1() {
-  const pathname = usePathname();
+  const t = useTranslator();
+  const pathname = stripPathLocale(usePathname());
   // menu-item-open
   return (
     <>
@@ -31,11 +34,11 @@ export default function Nav1() {
                 }`}
                 href={item.href}
               >
-                {item.label}
+                {t(item.label)}
               </Link>
             ) : (
               <a href={item.href}>
-                {item.label}
+                {t(item.label)}
                 {item.hasDropdown && (
                   <i className="fa-regular fa-chevron-down" />
                 )}
@@ -54,7 +57,7 @@ export default function Nav1() {
                       }`}
                       href={subItem.href}
                     >
-                      {subItem.label}
+                      {t(subItem.label)}
                     </Link>
                   </li>
                 ))}
@@ -86,11 +89,11 @@ export default function Nav1() {
                 }`}
                 href={item.href}
               >
-                {item.label}
+                {t(item.label)}
               </Link>
             ) : (
               <a href={item.href}>
-                {item.label}
+                {t(item.label)}
                 {item.hasDropdown && (
                   <i className="fa-regular fa-chevron-down" />
                 )}
@@ -109,7 +112,7 @@ export default function Nav1() {
                       }`}
                       href={subItem.href}
                     >
-                      {subItem.label}
+                      {t(subItem.label)}
                     </Link>
                   </li>
                 ))}

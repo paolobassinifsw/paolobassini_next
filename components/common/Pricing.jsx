@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import { pricingPlans } from "@/data/pricing";
 export default function Pricing({
   parentClass = "our-price-plan-area tmp-section-gapTop",

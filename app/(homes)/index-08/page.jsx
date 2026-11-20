@@ -8,7 +8,7 @@ import CommonComponents from "@/components/common/CommonComponents";
 import Footer4 from "@/components/footers/Footer4";
 import Hero from "@/components/homes/home-8/Hero";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import React from "react";
 
 export const metadata = {

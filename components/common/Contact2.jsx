@@ -1,4 +1,5 @@
 "use client";
+import { useTranslator } from "@/i18n/LocaleProvider";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 import { toast } from "react-toastify";
@@ -6,6 +7,7 @@ import { toast } from "react-toastify";
 export default function Contact({
   parentClass = "get-in-touch-area tmp-section-gapTop",
 }) {
+  const t = useTranslator();
   const form = useRef();
 
   const sandMail = (e) => {
@@ -28,7 +30,7 @@ export default function Contact({
       )
       .then((res) => {
         if (res.status == 200) {
-          toast.success("Message Sent successfully!", {
+          toast.success(t("Message Sent successfully!"), {
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -38,7 +40,7 @@ export default function Contact({
           });
           form.current.reset();
         } else {
-          toast.error("Ops Message not Sent!", {
+          toast.error(t("Ops Message not Sent!"), {
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -58,10 +60,10 @@ export default function Contact({
               <div className="col-lg-5">
                 <div className="section-head text-align-left">
                   <div className="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-                    <span className="subtitle">GET IN TOUCH</span>
+                    <span className="subtitle">{t("GET IN TOUCH")}</span>
                   </div>
                   <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-                    Elevate your brand with Me
+                    {t("Elevate your brand with Me")}
                   </h2>
                   <p className="description tmp-scroll-trigger tmp-fade-in animation-order-3">
                     ished fact that a reader will be distrol acted bioiiy desig
@@ -87,7 +89,7 @@ export default function Contact({
                               className="input-field"
                               name="name"
                               id="contact-name"
-                              placeholder="Your Name"
+                              placeholder={t("Your Name")}
                               type="text"
                               required
                             />
@@ -98,7 +100,7 @@ export default function Contact({
                             <input
                               className="input-field"
                               id="contact-phone"
-                              placeholder="Phone Number"
+                              placeholder={t("Phone Number")}
                               type="number"
                               required
                             />
@@ -110,7 +112,7 @@ export default function Contact({
                               className="input-field"
                               id="contact-email"
                               name="email"
-                              placeholder="Your Email"
+                              placeholder={t("Your Email")}
                               type="email"
                               required
                             />
@@ -123,7 +125,7 @@ export default function Contact({
                               type="text"
                               id="subject"
                               name="subject"
-                              placeholder="Subject"
+                              placeholder={t("Subject")}
                             />
                           </div>
                         </div>
@@ -131,7 +133,7 @@ export default function Contact({
                           <div className="form-group">
                             <textarea
                               className="input-field"
-                              placeholder="Your Message"
+                              placeholder={t("Your Message")}
                               name="message"
                               id="contact-message"
                               required
@@ -149,7 +151,7 @@ export default function Contact({
                             >
                               <span className="icon-reverse-wrapper">
                                 <span className="btn-text">
-                                  Appointment Now
+                                  {t("Appointment Now")}
                                 </span>
                                 <span className="btn-icon">
                                   <i className="fa-sharp fa-regular fa-arrow-right" />

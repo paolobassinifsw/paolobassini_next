@@ -6,7 +6,7 @@ import Services from "@/components/common/Services";
 import Skills from "@/components/common/Skills";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import React from "react";
 import CommonComponents from "@/components/common/CommonComponents";
 export const metadata = {

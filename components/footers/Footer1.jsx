@@ -1,6 +1,7 @@
 "use client";
+import { useTranslator } from "@/i18n/LocaleProvider";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import Demomodal from "../modals/Demomodal";
 import Chat from "../common/Chat";
 import DemoToggler from "../common/DemoToggler";
@@ -13,6 +14,7 @@ export default function Footer1({
   darkLogo = "/assets/images/logo/white-logo-reeni.png",
   lightLogo = "/assets/images/logo/logo-white.png",
 }) {
+  const t = useTranslator();
   return (
     <>
       <footer className="footer-area footer-style-one-wrapper bg-color-footer bg_images tmp-section-gap">
@@ -25,14 +27,14 @@ export default function Footer1({
                     <Link href={`/`}>
                       <Image
                         className="logo-dark"
-                        alt="Reeni - Personal Portfolio HTML Template for developers and freelancers"
+                        alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
                         src={darkLogo}
                         width={121}
                         height={41}
                       />
                       <Image
                         className="logo-white"
-                        alt="Reeni - Personal Portfolio HTML Template for developers and freelancers"
+                        alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
                         src={lightLogo}
                         width={121}
                         height={40}
@@ -40,13 +42,13 @@ export default function Footer1({
                     </Link>
                   </div>
                   <p className="description">
-                    <span>Get Ready</span> To Create Great
+                    <span>{t("Get Ready")}</span> {" " + t("To Create Great")}
                   </p>
                   <form
                     onSubmit={(e) => e.preventDefault()}
                     className="newsletter-form-1 mt--40"
                   >
-                    <input type="email" placeholder="Email Adress" />
+                    <input type="email" placeholder={t("Email Adress")} />
                     <span className="form-icon">
                       <i className="fa-regular fa-envelope" />
                     </span>
@@ -55,18 +57,18 @@ export default function Footer1({
               </div>
               <div className="col-lg-4 col-md-6">
                 <div className="single-footer-wrapper quick-link-wrap">
-                  <h5 className="ft-title">Quick Link</h5>
+                  <h5 className="ft-title">{t("Quick Link")}</h5>
                   <ul className="ft-link tmp-link-animation dark-content">
                     {footerLinks.map((item, index) => (
                       <li key={index}>
-                        <Link href={item.href}>{item.label}</Link>
+                        <Link href={item.href}>{t(item.label)}</Link>
                       </li>
                     ))}
                   </ul>
                   <ul className="ft-link tmp-link-animation light-content2">
                     {footerLinksWhite.map((item, index) => (
                       <li key={index}>
-                        <Link href={item.href}>{item.label}</Link>
+                        <Link href={item.href}>{t(item.label)}</Link>
                       </li>
                     ))}
                   </ul>
@@ -74,7 +76,7 @@ export default function Footer1({
               </div>
               <div className="col-lg-3 col-md-6">
                 <div className="single-footer-wrapper contact-wrap">
-                  <h5 className="ft-title">Contact</h5>
+                  <h5 className="ft-title">{t("Contact")}</h5>
                   <ul className="ft-link tmp-link-animation">
                     <li>
                       <span className="ft-icon">

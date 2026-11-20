@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import OnepageNav2 from "./OnepageNav2";
 export default function Header3() {
   return (

@@ -1,9 +1,11 @@
+import { getTranslator } from "@/i18n/server";
 import React from "react";
 
 import { services } from "@/data/services";
 
-import Link from "next/link";
-export default function Services({ isLight = false }) {
+import Link from "@/i18n/LocalizedLink";
+export default async function Services({ isLight = false }) {
+  const t = await getTranslator();
   return (
     <section className="service-area tmp-section-gap">
       <div className="container">
@@ -22,10 +24,10 @@ export default function Services({ isLight = false }) {
                       service.slug
                     }`}
                   >
-                    {service.title}
+                    {t(service.title)}
                   </Link>
                 </h4>
-                <p className="service-para">{service.projects}</p>
+                <p className="service-para">{t(service.projects)}</p>
               </div>
             </div>
           ))}

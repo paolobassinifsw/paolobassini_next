@@ -1,8 +1,10 @@
 "use client";
 
+import { useTranslator } from "@/i18n/LocaleProvider";
 import { openDemoModal } from "@/utlis/toggleDemoModal";
 
 export default function DemoToggler() {
+  const t = useTranslator();
   return (
     <div className="demo-button-wrapper">
       <div className="buy-theme">
@@ -32,7 +34,7 @@ export default function DemoToggler() {
       <div className="all-demo show-demo" onClick={openDemoModal}>
         <div className="demos">
           <div className="theme-wrapper">
-            <div>44 Pre-built sites</div>
+            <div>{t("44 Pre-built sites")}</div>
           </div>
         </div>
       </div>

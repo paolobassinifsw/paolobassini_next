@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 import TyperComponent from "@/components/common/TyperComponent";
 
 export default function Hero() {

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { portfolioItems2 } from "@/data/portfolio";
 
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 export default function Portfolio({ isLight = false }) {
   return (
     <div

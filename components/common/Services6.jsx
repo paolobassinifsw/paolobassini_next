@@ -2,7 +2,7 @@ import React from "react";
 
 import { services2 } from "@/data/services";
 
-import Link from "next/link";
+import Link from "@/i18n/LocalizedLink";
 
 export default function Services({
   parentClass = "latest-service-area tmp-section-gapTop",

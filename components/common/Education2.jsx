@@ -1,29 +1,29 @@
+import { getTranslator } from "@/i18n/server";
 import React from "react";
 import Image from "next/image";
 import { educationExperienceData } from "@/data/education";
-export default function Education() {
+export default async function Education() {
+  const t = await getTranslator();
   return (
     <section className="education-experience tmp-section-gapTop" id="resume">
       <div className="container">
         <div className="section-head mb--50">
           <div className="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-            <span className="subtitle">Education &amp; Experience</span>
+            <span className="subtitle">{t("Education & Experience")}</span>
           </div>
           <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-            Empowering Creativity <br />
-            through
+            {t("Empowering Creativity") + " "} <br />
+            {t("through")}
           </h2>
           <p className="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">
-            Business consulting consultants provide expert advice and guida
-            businesses to help them improve their performance, efficiency, and
-            organizational
+            {t("Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational")}
           </p>
         </div>
         <h2 className="custom-title mb-32 tmp-scroll-trigger tmp-fade-in animation-order-1">
-          Education
+          {t("Education")}
           <span>
             <Image
-              alt="custom-line"
+              alt={t("custom-line")}
               src="/assets/images/custom-line/custom-line.png"
               width={81}
               height={6}
@@ -36,9 +36,9 @@ export default function Education() {
               <div
                 className={`education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-${item.animationOrder}`}
               >
-                <h4 className="edu-sub-title">{item.role}</h4>
+                <h4 className="edu-sub-title">{t(item.role)}</h4>
                 <h2 className="edu-title">{item.duration}</h2>
-                <p className="edu-para">{item.description}</p>
+                <p className="edu-para">{t(item.description)}</p>
               </div>
             </div>
           ))}
@@ -48,10 +48,10 @@ export default function Education() {
             <div className="col-lg-6">
               <div className="experiences-wrap-left-content">
                 <h2 className="custom-title mb-32 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                  Experiences
+                  {t("Experiences")}
                   <span>
                     <Image
-                      alt="custom-line"
+                      alt={t("custom-line")}
                       src="/assets/images/custom-line/custom-line.png"
                       width={81}
                       height={6}
@@ -59,9 +59,9 @@ export default function Education() {
                   </span>
                 </h2>
                 <div className="experience-content tmp-scroll-trigger tmp-fade-in animation-order-1">
-                  <p className="ex-subtitle">experience</p>
-                  <h2 className="ex-name">Soft Tech (2 Years)</h2>
-                  <h3 className="ex-title">UI/UX Designer</h3>
+                  <p className="ex-subtitle">{t("experience")}</p>
+                  <h2 className="ex-name">{t("Soft Tech (2 Years)")}</h2>
+                  <h3 className="ex-title">{t("UI/UX Designer")}</h3>
                   <p className="ex-para">
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum desi dolore eu fugiat nulla pariatu Duis aute
@@ -69,13 +69,11 @@ export default function Education() {
                   </p>
                 </div>
                 <div className="experience-content tmp-scroll-trigger tmp-fade-in animation-order-2">
-                  <p className="ex-subtitle">experience</p>
-                  <h2 className="ex-name">ModernTech (3 Years)</h2>
-                  <h3 className="ex-title">App Developer</h3>
+                  <p className="ex-subtitle">{t("experience")}</p>
+                  <h2 className="ex-name">{t("ModernTech (3 Years)")}</h2>
+                  <h3 className="ex-title">{t("App Developer")}</h3>
                   <p className="ex-para">
-                    In this portfolio, you’ll find a curated selection of
-                    projects that highlight my skills in [Main Areas, e.g.,
-                    responsive web design.
+                    {t("In this portfolio, you’ll find a curated selection of projects that highlight my skills in [Main Areas, e.g., responsive web design.")}
                   </p>
                 </div>
               </div>
@@ -84,7 +82,7 @@ export default function Education() {
               <div className="experiences-wrap-right-content">
                 <Image
                   className="tmp-scroll-trigger tmp-zoom-in animation-order-1"
-                  alt="expert-img"
+                  alt={t("expert-img")}
                   src="/assets/images/experiences/expert-img.jpg"
                   width={945}
                   height={719}

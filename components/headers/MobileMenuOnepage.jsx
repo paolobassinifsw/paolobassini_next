@@ -1,11 +1,13 @@
 "use client";
 
+import { useTranslator } from "@/i18n/LocaleProvider";
 import { closeMobilemenu2 } from "@/utlis/toggleMobilemenu";
 
 import React, { useEffect, useRef } from "react";
 import OnepageNavMobile from "./OnepageNavMobile";
 
 export default function MobileMenuOnepage() {
+  const t = useTranslator();
   const menuRef = useRef(null);
   const innerRef = useRef(null);
 
@@ -32,14 +34,14 @@ export default function MobileMenuOnepage() {
               <a href="index.html" className="logo-area">
                 <img
                   className="logo-dark"
-                  alt="Reeni - Personal Portfolio HTML Template for developers and freelancers"
+                  alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
                   src="/assets/images/logo/white-logo-reeni.png"
                   width={121}
                   height={41}
                 />
                 <img
                   className="logo-white"
-                  alt="Reeni - Personal Portfolio HTML Template for developers and freelancers"
+                  alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
                   src="/assets/images/logo/logo-white.png"
                   width={121}
                   height={40}
@@ -57,7 +59,7 @@ export default function MobileMenuOnepage() {
           </div>
           <OnepageNavMobile />
           <div className="social-wrapper mt--40">
-            <span className="subtitle">find with me</span>
+            <span className="subtitle">{t("find with me")}</span>
             <div className="social-link">
               <a href="#">
                 <i className="fa-brands fa-instagram" />
