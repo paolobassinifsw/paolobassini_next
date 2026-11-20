@@ -34,11 +34,11 @@ export default function Nav1() {
                 }`}
                 href={item.href}
               >
-                {t(item.label)}
+                {t(item.labelKey)}
               </Link>
             ) : (
               <a href={item.href}>
-                {t(item.label)}
+                {t(item.labelKey)}
                 {item.hasDropdown && (
                   <i className="fa-regular fa-chevron-down" />
                 )}
@@ -57,7 +57,7 @@ export default function Nav1() {
                       }`}
                       href={subItem.href}
                     >
-                      {t(subItem.label)}
+                      {t(subItem.labelKey)}
                     </Link>
                   </li>
                 ))}
@@ -89,11 +89,11 @@ export default function Nav1() {
                 }`}
                 href={item.href}
               >
-                {t(item.label)}
+                {t(item.labelKey)}
               </Link>
             ) : (
               <a href={item.href}>
-                {t(item.label)}
+                {t(item.labelKey)}
                 {item.hasDropdown && (
                   <i className="fa-regular fa-chevron-down" />
                 )}
@@ -112,7 +112,7 @@ export default function Nav1() {
                       }`}
                       href={subItem.href}
                     >
-                      {t(subItem.label)}
+                      {t(subItem.labelKey)}
                     </Link>
                   </li>
                 ))}

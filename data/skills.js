@@ -1,3 +1,4 @@
+import { englishCopy } from "@/i18n/englishCopy";
 export const skills = [
   {
     alt: "Figma",
@@ -67,7 +68,7 @@ export const skills = [
 
 export const skillSections = [
   {
-    title: "Design Skill",
+    ...englishCopy({ title: "skills.designTitle" }),
     skills: [
       { name: "PHOTOSHOT", percent: 100, duration: "0.5s", delay: ".3s" },
       { name: "FIGMA", percent: 95, duration: "0.6s", delay: ".4s" },
@@ -81,7 +82,7 @@ export const skillSections = [
     ],
   },
   {
-    title: "Development Skill",
+    ...englishCopy({ title: "skills.developmentTitle" }),
     skills: [
       { name: "PHOTOSHOT", percent: 100, duration: "0.5s", delay: ".3s" },
       { name: "FIGMA", percent: 95, duration: "0.6s", delay: ".4s" },

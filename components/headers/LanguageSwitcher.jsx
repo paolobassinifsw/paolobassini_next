@@ -1,12 +1,13 @@
 "use client";
 
-import { useLocale } from "@/i18n/LocaleProvider";
+import { useLocale, useTranslator } from "@/i18n/LocaleProvider";
 import { localeCookie, locales, resolveLocale } from "@/i18n/locales";
 
 import { localizePath } from "@/i18n/paths";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
+  const t = useTranslator();
 
   function changeLanguage(event) {
     const language = resolveLocale(event.target.value);
@@ -19,7 +20,7 @@ export default function LanguageSwitcher() {
 
   return (
     <select
-      aria-label={locale === "it" ? "Lingua del sito" : "Site language"}
+      aria-label={t("nav.siteLanguage")}
       value={locale}
       onChange={changeLanguage}
       className="w-auto bg-transparent text-reset border rounded px-2"

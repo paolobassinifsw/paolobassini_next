@@ -2,22 +2,15 @@
 import { useTranslator } from "@/i18n/LocaleProvider";
 import Image from "next/image";
 import Link from "@/i18n/LocalizedLink";
-import { portfolioItems } from "@/data/portfolio";
+import { portfolioFilters, portfolioItems } from "@/data/portfolio";
 import { useEffect, useState } from "react";
 
 export default function Portofolio({ isLight = false }) {
   const t = useTranslator();
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("all");
   const [filtered, setFiltered] = useState(portfolioItems);
-  const categories = [
-    "All",
-    "Branding",
-    "Design",
-    "Content writing",
-    "Marketing",
-  ];
   useEffect(() => {
-    if (activeCategory == "All") {
+    if (activeCategory == "all") {
       setFiltered(portfolioItems);
     } else {
       setFiltered(
@@ -34,27 +27,27 @@ export default function Portofolio({ isLight = false }) {
       <div className="container">
         <div className="section-head mb--60">
           <div className="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-            <span className="subtitle">{t("Latest Portfolio")}</span>
+            <span className="subtitle">{t("portfolio.eyebrow")}</span>
           </div>
           <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-            {t("Transforming Ideas into Exceptional")}
+            {t("portfolio.title")}
           </h2>
           <p className="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">
-            {t("Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational")}
+            {t("portfolio.description")}
           </p>
         </div>
         <div className="latest-portfolio-tabs-area">
           <nav>
             <ul className="nav nav-tabs">
-              {categories.map((category) => (
-                <li key={t(category)}>
+              {portfolioFilters.map((category) => (
+                <li key={category}>
                   <button
                     className={`nav-link ${
                       activeCategory === category ? "active" : ""
                     }`}
                     onClick={() => setActiveCategory(category)}
                   >
-                    {t(category)}
+                    {t(`portfolio.filters.${category}`)}
                   </button>
                 </li>
               ))}
@@ -78,7 +71,7 @@ export default function Portofolio({ isLight = false }) {
                           >
                             <Image
                               className="w-100"
-                              alt={t("Thumbnail")}
+                              alt={t("portfolio.thumbnailAlt")}
                               src={item.imageSrc}
                               width={item.width}
                               height={item.height}
@@ -94,15 +87,15 @@ export default function Portofolio({ isLight = false }) {
                                 isLight ? "-white" : ""
                               }/${item.slug}`}
                             >
-                              {t(item.title)}
+                              {t(item.titleKey)}
                             </Link>
                           </h3>
                           <div className="tag-items">
                             <ul>
-                              {item.tags.map((tag, index) => (
+                              {item.tagKeys.map((tagKey, index) => (
                                 <li key={index}>
                                   <a href="#" className="tag-item">
-                                    {t(tag)}
+                                    {t(tagKey)}
                                   </a>
                                 </li>
                               ))}
@@ -116,7 +109,7 @@ export default function Portofolio({ isLight = false }) {
                           }`}
                         >
                           <span className="icon-reverse-wrapper">
-                            <span className="btn-text">{t("View design")}</span>
+                            <span className="btn-text">{t("portfolio.viewDesign")}</span>
                             <span className="btn-icon">
                               <i className="fa-sharp fa-regular fa-arrow-right" />
                             </span>

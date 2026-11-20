@@ -30,7 +30,7 @@ export default function Contact({
       )
       .then((res) => {
         if (res.status == 200) {
-          toast.success(t("Message Sent successfully!"), {
+          toast.success(t("contact.sent"), {
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -40,7 +40,7 @@ export default function Contact({
           });
           form.current.reset();
         } else {
-          toast.error(t("Ops Message not Sent!"), {
+          toast.error(t("contact.notSent"), {
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -60,15 +60,13 @@ export default function Contact({
               <div className="col-lg-5">
                 <div className="section-head text-align-left">
                   <div className="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-                    <span className="subtitle">{t("GET IN TOUCH")}</span>
+                    <span className="subtitle">{t("contact.eyebrow")}</span>
                   </div>
                   <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-                    {t("Elevate your brand with Me")}
+                    {t("contact.title")}
                   </h2>
                   <p className="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                    ished fact that a reader will be distrol acted bioiiy desig
-                    ished fact that a reader will acted ished fact that a reader
-                    will be distrol acted
+                    {t("contact.description")}
                   </p>
                 </div>
               </div>
@@ -89,7 +87,7 @@ export default function Contact({
                               className="input-field"
                               name="name"
                               id="contact-name"
-                              placeholder={t("Your Name")}
+                              placeholder={t("form.name")}
                               type="text"
                               required
                             />
@@ -100,7 +98,7 @@ export default function Contact({
                             <input
                               className="input-field"
                               id="contact-phone"
-                              placeholder={t("Phone Number")}
+                              placeholder={t("form.phone")}
                               type="number"
                               required
                             />
@@ -112,7 +110,7 @@ export default function Contact({
                               className="input-field"
                               id="contact-email"
                               name="email"
-                              placeholder={t("Your Email")}
+                              placeholder={t("form.email")}
                               type="email"
                               required
                             />
@@ -125,7 +123,7 @@ export default function Contact({
                               type="text"
                               id="subject"
                               name="subject"
-                              placeholder={t("Subject")}
+                              placeholder={t("form.subject")}
                             />
                           </div>
                         </div>
@@ -133,7 +131,7 @@ export default function Contact({
                           <div className="form-group">
                             <textarea
                               className="input-field"
-                              placeholder={t("Your Message")}
+                              placeholder={t("form.message")}
                               name="message"
                               id="contact-message"
                               required
@@ -151,7 +149,7 @@ export default function Contact({
                             >
                               <span className="icon-reverse-wrapper">
                                 <span className="btn-text">
-                                  {t("Appointment Now")}
+                                  {t("contact.appointment")}
                                 </span>
                                 <span className="btn-icon">
                                   <i className="fa-sharp fa-regular fa-arrow-right" />

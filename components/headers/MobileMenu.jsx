@@ -36,14 +36,14 @@ export default function MobileMenu() {
               <a href="index.html" className="logo-area">
                 <img
                   className="logo-dark"
-                  alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
+                  alt={t("shared.logoAlt")}
                   src="/assets/images/logo/white-logo-reeni.png"
                   width={121}
                   height={41}
                 />
                 <img
                   className="logo-white"
-                  alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
+                  alt={t("shared.logoAlt")}
                   src="/assets/images/logo/logo-white.png"
                   width={121}
                   height={40}
@@ -83,7 +83,7 @@ export default function MobileMenu() {
                     }`}
                     href={item.href}
                   >
-                    {t(item.label)}
+                    {t(item.labelKey)}
                   </Link>
                 ) : (
                   <a
@@ -93,7 +93,7 @@ export default function MobileMenu() {
                     }
                     className={activeParent == index ? "open" : ""}
                   >
-                    {t(item.label)}
+                    {t(item.labelKey)}
                     {item.hasDropdown && (
                       <i className="fa-regular fa-chevron-down" />
                     )}
@@ -117,7 +117,7 @@ export default function MobileMenu() {
                           }`}
                           href={subItem.href}
                         >
-                          {t(subItem.label)}
+                          {t(subItem.labelKey)}
                         </Link>
                       </li>
                     ))}
@@ -127,7 +127,7 @@ export default function MobileMenu() {
             ))}
           </ul>
           <div className="social-wrapper mt--40">
-            <span className="subtitle">{t("find with me")}</span>
+            <span className="subtitle">{t("shared.follow")}</span>
             <div className="social-link">
               <a href="#">
                 <i className="fa-brands fa-instagram" />

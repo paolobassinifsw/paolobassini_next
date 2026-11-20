@@ -34,7 +34,7 @@ export default function DemoToggler() {
       <div className="all-demo show-demo" onClick={openDemoModal}>
         <div className="demos">
           <div className="theme-wrapper">
-            <div>{t("44 Pre-built sites")}</div>
+            <div>{t("demo.prebuiltSites")}</div>
           </div>
         </div>
       </div>

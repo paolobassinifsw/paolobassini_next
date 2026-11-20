@@ -3,14 +3,14 @@ import { closeMobilemenu2 } from "@/utlis/toggleMobilemenu";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { id: 1, href: "#home", text: "Home" },
-  { id: 2, href: "#about", text: "About" },
-  { id: 3, href: "#service", text: "Services" },
-  { id: 4, href: "#portfolio", text: "Portfolio" },
-  { id: 5, href: "#resume", text: "Resume" },
-  { id: 6, href: "#pricing", text: "Pricing" },
-  { id: 7, href: "#blog", text: "Blog" },
-  { id: 8, href: "#contacts", text: "Contact" },
+  { id: 1, href: "#home", textKey: "nav.home" },
+  { id: 2, href: "#about", textKey: "nav.about" },
+  { id: 3, href: "#service", textKey: "nav.services" },
+  { id: 4, href: "#portfolio", textKey: "nav.portfolio" },
+  { id: 5, href: "#resume", textKey: "nav.resume" },
+  { id: 6, href: "#pricing", textKey: "nav.pricing" },
+  { id: 7, href: "#blog", textKey: "nav.blog" },
+  { id: 8, href: "#contacts", textKey: "nav.contact" },
 ];
 
 export default function OnepageNavMobile({
@@ -77,7 +77,7 @@ export default function OnepageNavMobile({
             onClick={(e) => handleClick(e, item.href)}
             href={item.href}
           >
-            {t(item.text)}
+            {t(item.textKey)}
           </a>
         </li>
       ))}

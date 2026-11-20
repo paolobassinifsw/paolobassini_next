@@ -10,16 +10,16 @@ export default async function Experiences2() {
         <div className="header-top-inner">
           <div className="section-head text-align-left">
             <div className="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-              <span className="subtitle">{t("My Expertise")}</span>
+              <span className="subtitle">{t("expertise.eyebrow")}</span>
             </div>
             <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-              {t("Elevated Designs Personalized") + " "} <br />
-              {t("the best Experiences")}
+              {t("expertise.titleStart") + " "} <br />
+              {t("expertise.titleEnd")}
             </h2>
           </div>
           <div className="discription-area tmp-scroll-trigger tmp-fade-in animation-order-3">
             <p className="description color-primary-3rd">
-              {t("Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational")}
+              {t("expertise.description")}
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default async function Experiences2() {
                   <div className="expertise-card-logo">
                     <Image alt="logo" src={item.icon} width={45} height={45} />
                   </div>
-                  <h3 className="title">{t(item.title)}</h3>
+                  <h3 className="title">{t(item.titleKey)}</h3>
                 </div>
                 <div
                   className="single-progress-circle sal-animate"
@@ -67,7 +67,7 @@ export default async function Experiences2() {
                     </text>
                   </svg>
                 </div>
-                <p className="para">{t(item.description)}</p>
+                <p className="para">{t(item.descriptionKey)}</p>
               </div>
               <button className="service-link modal-popup" />
             </div>

@@ -1,8 +1,9 @@
+import { englishCopy } from "@/i18n/englishCopy";
 export const counters = [
-  { count: 20, suffix: "k+", text: "Our Project Complete", order: 1 },
-  { count: 10, suffix: "k+", text: "Our Natural Products", order: 2 },
-  { count: 200, suffix: "+", text: "Clients Reviews", order: 3 },
-  { count: 1000, suffix: "+", text: "our Satisfied Clientd", order: 4 },
+  { count: 20, suffix: "k+", ...englishCopy({ text: "facts.projects" }), order: 1 },
+  { count: 10, suffix: "k+", ...englishCopy({ text: "facts.products" }), order: 2 },
+  { count: 200, suffix: "+", ...englishCopy({ text: "facts.reviews" }), order: 3 },
+  { count: 1000, suffix: "+", ...englishCopy({ text: "facts.clients" }), order: 4 },
 ];
 
 export const countData = [

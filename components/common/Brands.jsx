@@ -17,7 +17,7 @@ export default async function Brands({
                 className={`support-company-logo tmp-scroll-trigger tmp-fade-in animation-order-${logo.animationOrder}`}
               >
                 <Image
-                  alt={t("Reeni - Personal Portfolio HTML Template")}
+                  alt={t("brands.imageAlt")}
                   src={logo.src}
                   width={logo.width}
                   height={logo.height}

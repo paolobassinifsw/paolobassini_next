@@ -27,14 +27,14 @@ export default function Footer1({
                     <Link href={`/`}>
                       <Image
                         className="logo-dark"
-                        alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
+                        alt={t("shared.logoAlt")}
                         src={darkLogo}
                         width={121}
                         height={41}
                       />
                       <Image
                         className="logo-white"
-                        alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
+                        alt={t("shared.logoAlt")}
                         src={lightLogo}
                         width={121}
                         height={40}
@@ -42,13 +42,13 @@ export default function Footer1({
                     </Link>
                   </div>
                   <p className="description">
-                    <span>{t("Get Ready")}</span> {" " + t("To Create Great")}
+                    <span>{t("footer.titleStart")}</span> {" " + t("footer.titleEnd")}
                   </p>
                   <form
                     onSubmit={(e) => e.preventDefault()}
                     className="newsletter-form-1 mt--40"
                   >
-                    <input type="email" placeholder={t("Email Adress")} />
+                    <input type="email" placeholder={t("footer.emailPlaceholder")} />
                     <span className="form-icon">
                       <i className="fa-regular fa-envelope" />
                     </span>
@@ -57,18 +57,18 @@ export default function Footer1({
               </div>
               <div className="col-lg-4 col-md-6">
                 <div className="single-footer-wrapper quick-link-wrap">
-                  <h5 className="ft-title">{t("Quick Link")}</h5>
+                  <h5 className="ft-title">{t("footer.quickLinks")}</h5>
                   <ul className="ft-link tmp-link-animation dark-content">
                     {footerLinks.map((item, index) => (
                       <li key={index}>
-                        <Link href={item.href}>{t(item.label)}</Link>
+                        <Link href={item.href}>{t(item.labelKey)}</Link>
                       </li>
                     ))}
                   </ul>
                   <ul className="ft-link tmp-link-animation light-content2">
                     {footerLinksWhite.map((item, index) => (
                       <li key={index}>
-                        <Link href={item.href}>{t(item.label)}</Link>
+                        <Link href={item.href}>{t(item.labelKey)}</Link>
                       </li>
                     ))}
                   </ul>
@@ -76,7 +76,7 @@ export default function Footer1({
               </div>
               <div className="col-lg-3 col-md-6">
                 <div className="single-footer-wrapper contact-wrap">
-                  <h5 className="ft-title">{t("Contact")}</h5>
+                  <h5 className="ft-title">{t("nav.contact")}</h5>
                   <ul className="ft-link tmp-link-animation">
                     <li>
                       <span className="ft-icon">
