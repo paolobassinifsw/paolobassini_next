@@ -1,4 +1,5 @@
 import { locales } from "./locales";
+import { italianRouteSlugs } from "./routeSlugs.mjs";
 
 const localePrefix = new RegExp(`^/(${locales.join("|")})(?=/|[?#]|$)`);
 
@@ -6,12 +7,27 @@ export function getPathLocale(path) {
   return path.match(localePrefix)?.[1];
 }
 
-export function stripPathLocale(path) {
-  return path.replace(localePrefix, "") || "/";
+const italianRoutes = Object.entries(italianRouteSlugs);
+const routePaths = italianRoutes.map(([route, slug]) => [slug, route]);
+
+function replaceRoutePrefix(pathname, routes) {
+  const match = routes.find(
+    ([prefix]) => pathname === prefix || pathname.startsWith(prefix + "/")
+  );
+
+  if (!match) return pathname;
+  const [prefix, replacement] = match;
+  return replacement + pathname.slice(prefix.length);
+}
+
+export function getRoutePath(pathname) {
+  const path = pathname.replace(localePrefix, "") || "/";
+  return replaceRoutePrefix(path, routePaths);
 }
 
 export function localizePath(pathname, locale) {
-  const pagePath = stripPathLocale(pathname);
+  const route = getRoutePath(pathname);
+  const pagePath = locale === "it" ? replaceRoutePrefix(route, italianRoutes) : route;
   return pagePath === "/" ? `/${locale}` : `/${locale}${pagePath}`;
 }
 
@@ -27,11 +43,10 @@ export function localizeHref(href, locale) {
     !pathname.startsWith("/") ||
     pathname.startsWith("//") ||
     /^\/(?:api|_next|assets)(?:\/|$)/.test(pathname) ||
-    /\.[^/]+$/.test(pathname) ||
-    getPathLocale(pathname)
+    /\.[^/]+$/.test(pathname)
   ) {
     return href;
   }
 
-  return localizePath(pathname, locale) + href.slice(pathname.length);
+  return localizePath(pathname, getPathLocale(pathname) ?? locale) + href.slice(pathname.length);
 }

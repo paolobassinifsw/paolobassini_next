@@ -1,8 +1,16 @@
+import { italianRouteSlugs } from "./i18n/routeSlugs.mjs";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
     return {
-      beforeFiles: [{ source: "/:locale(it|en)/:path*", destination: "/:path*" }],
+      beforeFiles: [
+        ...Object.entries(italianRouteSlugs).map(([route, slug]) => ({
+          source: `/it${slug}/:path*`,
+          destination: `${route}/:path*`,
+        })),
+        { source: "/:locale(it|en)/:path*", destination: "/:path*" },
+      ],
     };
   },
   sassOptions: {
