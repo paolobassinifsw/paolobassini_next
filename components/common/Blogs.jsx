@@ -1,22 +1,24 @@
+import { getTranslator } from "@/i18n/server";
 import React from "react";
 import Image from "next/image";
 import { blogData2 } from "@/data/blogs";
 
 import Link from "next/link";
-export default function Blogs({
+export default async function Blogs({
   parentClass = "blog-and-news-are tmp-section-gap",
   isLight = false,
 }) {
+  const t = await getTranslator();
   return (
     <section className={parentClass} id="blog">
       <div className="container">
         <div className="section-head mb--60">
           <div className="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-            <span className="subtitle">Blog and news</span>
+            <span className="subtitle">{t("Blog and news")}</span>
           </div>
           <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-            Elevating Personal Branding the <br />
-            through Powerful Portfolios
+            {t("Elevating Personal Branding the") + " "} <br />
+            {t("through Powerful Portfolios")}
           </h2>
         </div>
         <div className="row">
@@ -34,7 +36,7 @@ export default function Blogs({
                     >
                       <Image
                         className="w-100"
-                        alt={blog.altText}
+                        alt={t(blog.altText)}
                         src={blog.imageSrc}
                         width={410}
                         height={294}
@@ -51,7 +53,7 @@ export default function Blogs({
                         <span className="tag-icon">
                           <i className="fa-solid fa-calendar-days" />
                         </span>
-                        {blog.date}
+                        {t(blog.date)}
                       </li>
                     </ul>
                   </div>
@@ -63,7 +65,7 @@ export default function Blogs({
                           blog.slug
                         }`}
                       >
-                        {blog.title}
+                        {t(blog.title)}
                       </Link>
                     </h3>
                     <div className="more-btn tmp-link-animation">
@@ -73,7 +75,7 @@ export default function Blogs({
                         }`}
                         className="read-more-btn"
                       >
-                        Read More
+                        {t("Read More")}
                         <span className="read-more-icon">
                           <i className="fa-solid fa-angle-right" />
                         </span>

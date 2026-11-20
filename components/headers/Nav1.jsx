@@ -1,9 +1,11 @@
 "use client";
+import { useTranslator } from "@/i18n/LocaleProvider";
 import React from "react";
 import Link from "next/link";
 import { menuItems, menuItemsLight } from "@/data/menu";
 import { usePathname } from "next/navigation";
 export default function Nav1() {
+  const t = useTranslator();
   const pathname = usePathname();
   // menu-item-open
   return (
@@ -31,11 +33,11 @@ export default function Nav1() {
                 }`}
                 href={item.href}
               >
-                {item.label}
+                {t(item.label)}
               </Link>
             ) : (
               <a href={item.href}>
-                {item.label}
+                {t(item.label)}
                 {item.hasDropdown && (
                   <i className="fa-regular fa-chevron-down" />
                 )}
@@ -54,7 +56,7 @@ export default function Nav1() {
                       }`}
                       href={subItem.href}
                     >
-                      {subItem.label}
+                      {t(subItem.label)}
                     </Link>
                   </li>
                 ))}
@@ -86,11 +88,11 @@ export default function Nav1() {
                 }`}
                 href={item.href}
               >
-                {item.label}
+                {t(item.label)}
               </Link>
             ) : (
               <a href={item.href}>
-                {item.label}
+                {t(item.label)}
                 {item.hasDropdown && (
                   <i className="fa-regular fa-chevron-down" />
                 )}
@@ -109,7 +111,7 @@ export default function Nav1() {
                       }`}
                       href={subItem.href}
                     >
-                      {subItem.label}
+                      {t(subItem.label)}
                     </Link>
                   </li>
                 ))}

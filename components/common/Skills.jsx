@@ -1,9 +1,11 @@
+import { getTranslator } from "@/i18n/server";
 import React from "react";
 import Image from "next/image";
 import { skillSections } from "@/data/skills";
-export default function Skills({
+export default async function Skills({
   parentClass = "tmp-skill-area tmp-section-gapTop",
 }) {
+  const t = await getTranslator();
   return (
     <div className={parentClass}>
       <div className="container">
@@ -13,10 +15,10 @@ export default function Skills({
               <div className="progress-wrapper">
                 <div className="content">
                   <h2 className="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                    {section.title}
+                    {t(section.title)}
                     <span>
                       <Image
-                        alt="custom-line"
+                        alt={t("custom-line")}
                         src="/assets/images/custom-line/custom-line.png"
                         width={81}
                         height={6}

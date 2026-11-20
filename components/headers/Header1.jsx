@@ -1,5 +1,7 @@
 "use client";
+import { useTranslator } from "@/i18n/LocaleProvider";
 import React from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
 import Nav1 from "./Nav1";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +11,7 @@ export default function Header1({
   darkLogo = "/assets/images/logo/white-logo-reeni.png",
   lightLogo = "/assets/images/logo/logo-white.png",
 }) {
+  const t = useTranslator();
   return (
     <header className="tmp-header-area-start header-one header--sticky header--transparent">
       <div className="container">
@@ -19,14 +22,14 @@ export default function Header1({
                 <Link href={`/`}>
                   <Image
                     className="logo-dark"
-                    alt="Reeni - Personal Portfolio HTML Template for developers and freelancers"
+                    alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
                     src={darkLogo}
                     width={121}
                     height={41}
                   />
                   <Image
                     className="logo-white"
-                    alt="Reeni - Personal Portfolio HTML Template for developers and freelancers"
+                    alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
                     src={lightLogo}
                     width={121}
                     height={40}
@@ -53,7 +56,8 @@ export default function Header1({
                     </a>
                   </div>
                 </div>
-                <div className="actions-area">
+                <div className="actions-area d-flex align-items-center gap-2">
+                  <LanguageSwitcher />
                   <div className="tmp-side-collups-area d-none d-xl-block">
                     <button
                       className="tmp-menu-bars tmp_button_active"

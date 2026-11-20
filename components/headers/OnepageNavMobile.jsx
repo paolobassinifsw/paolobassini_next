@@ -1,3 +1,4 @@
+import { useTranslator } from "@/i18n/LocaleProvider";
 import { closeMobilemenu2 } from "@/utlis/toggleMobilemenu";
 import { useEffect, useState } from "react";
 
@@ -16,6 +17,7 @@ export default function OnepageNavMobile({
   sectionIds = navItems,
   activeClass = "current",
 }) {
+  const t = useTranslator();
   const [activeSection, setActiveSection] = useState(
     sectionIds[0].href.replace("#", "")
   );
@@ -75,7 +77,7 @@ export default function OnepageNavMobile({
             onClick={(e) => handleClick(e, item.href)}
             href={item.href}
           >
-            {item.text}
+            {t(item.text)}
           </a>
         </li>
       ))}

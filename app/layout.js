@@ -2,6 +2,8 @@ import "../public/assets/scss/main.scss";
 import "odometer/themes/odometer-theme-default.css"; // Import theme
 import "react-toastify/dist/ReactToastify.css";
 import LayoutWrapper from "@/components/common/LayoutWrapper";
+import LocaleProvider from "@/i18n/LocaleProvider";
+import { getLocale } from "@/i18n/server";
 import Script from 'next/script';
 import { ToastContainer } from "react-toastify";
 export const metadata = {
@@ -10,9 +12,11 @@ export const metadata = {
   description:
     "Reeni is a modern personal portfolio template for designers, developers, content writer, cleaner, programmer, fashion designer, model, Influencer and freelancers. Fully responsive, SEO-friendly, Bootstrap and easy to customize.",
 };
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const locale = await getLocale();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -47,7 +51,7 @@ export default function RootLayout({ children }) {
             draggable
             pauseOnHover
           />
-          {children}
+          <LocaleProvider locale={locale}>{children}</LocaleProvider>
         </LayoutWrapper>
       </body>
     </html>

@@ -1,6 +1,8 @@
+import { getTranslator } from "@/i18n/server";
 import React from "react";
 import Link from "next/link";
-export default function Copyright() {
+export default async function Copyright() {
+  const t = await getTranslator();
   return (
     <div className="copyright-area-one">
       <div className="container">
@@ -15,28 +17,28 @@ export default function Copyright() {
                 >
                   Inversweb {new Date().getFullYear()}
                 </a>{" "}
-                | All Rights Reserved
+                {t("| All Rights Reserved")}
               </p>{" "}
               <ul className="tmp-link-animation dark-content">
                 <li>
-                  <a href="#">Trams &amp; Condition</a>
+                  <a href="#">{t("Trams & Condition")}</a>
                 </li>
                 <li>
-                  <a href="#">Privacy Policy</a>
+                  <a href="#">{t("Privacy Policy")}</a>
                 </li>
                 <li>
-                  <Link href={`/contact`}>Contact Us</Link>
+                  <Link href={`/contact`}>{t("Contact Us")}</Link>
                 </li>
               </ul>
               <ul className="tmp-link-animation light-content">
                 <li>
-                  <a href="#">Trams &amp; Condition</a>
+                  <a href="#">{t("Trams & Condition")}</a>
                 </li>
                 <li>
-                  <a href="#">Privacy Policy</a>
+                  <a href="#">{t("Privacy Policy")}</a>
                 </li>
                 <li>
-                  <Link href={`/contact-white`}>Contact Us</Link>
+                  <Link href={`/contact-white`}>{t("Contact Us")}</Link>
                 </li>
               </ul>
             </div>

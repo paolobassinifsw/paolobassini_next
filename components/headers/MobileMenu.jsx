@@ -1,4 +1,5 @@
 "use client";
+import { useTranslator } from "@/i18n/LocaleProvider";
 import { menuItems } from "@/data/menu";
 import { closeMobilemenu } from "@/utlis/toggleMobilemenu";
 import Link from "next/link";
@@ -6,6 +7,7 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function MobileMenu() {
+  const t = useTranslator();
   const pathname = usePathname();
   const menuRef = useRef(null);
   const innerRef = useRef(null);
@@ -33,14 +35,14 @@ export default function MobileMenu() {
               <a href="index.html" className="logo-area">
                 <img
                   className="logo-dark"
-                  alt="Reeni - Personal Portfolio HTML Template for developers and freelancers"
+                  alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
                   src="/assets/images/logo/white-logo-reeni.png"
                   width={121}
                   height={41}
                 />
                 <img
                   className="logo-white"
-                  alt="Reeni - Personal Portfolio HTML Template for developers and freelancers"
+                  alt={t("Reeni - Personal Portfolio HTML Template for developers and freelancers")}
                   src="/assets/images/logo/logo-white.png"
                   width={121}
                   height={40}
@@ -80,7 +82,7 @@ export default function MobileMenu() {
                     }`}
                     href={item.href}
                   >
-                    {item.label}
+                    {t(item.label)}
                   </Link>
                 ) : (
                   <a
@@ -90,7 +92,7 @@ export default function MobileMenu() {
                     }
                     className={activeParent == index ? "open" : ""}
                   >
-                    {item.label}
+                    {t(item.label)}
                     {item.hasDropdown && (
                       <i className="fa-regular fa-chevron-down" />
                     )}
@@ -114,7 +116,7 @@ export default function MobileMenu() {
                           }`}
                           href={subItem.href}
                         >
-                          {subItem.label}
+                          {t(subItem.label)}
                         </Link>
                       </li>
                     ))}
@@ -124,7 +126,7 @@ export default function MobileMenu() {
             ))}
           </ul>
           <div className="social-wrapper mt--40">
-            <span className="subtitle">find with me</span>
+            <span className="subtitle">{t("find with me")}</span>
             <div className="social-link">
               <a href="#">
                 <i className="fa-brands fa-instagram" />
