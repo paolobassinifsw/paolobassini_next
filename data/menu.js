@@ -1,6 +1,6 @@
 import { englishCopy } from "@/i18n/englishCopy";
 export const menuItems = [
-  { ...englishCopy({ label: "nav.home" }), href: "#", isLink: false },
+  { ...englishCopy({ label: "nav.home" }), href: "/", isLink: true },
   { ...englishCopy({ label: "nav.about" }), href: "/about", isLink: true },
   {
     ...englishCopy({ label: "nav.services" }),
@@ -38,7 +38,7 @@ export const menuItems = [
   { ...englishCopy({ label: "nav.contact" }), href: "/contact", isLink: true },
 ];
 export const menuItemsLight = [
-  { ...englishCopy({ label: "nav.home" }), href: "#", isLink: false },
+  { ...englishCopy({ label: "nav.home" }), href: "/", isLink: true },
   { ...englishCopy({ label: "nav.about" }), href: "/about-white", isLink: true },
   {
     ...englishCopy({ label: "nav.services" }),
