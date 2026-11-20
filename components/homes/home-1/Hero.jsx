@@ -35,10 +35,9 @@ export default async function Hero() {
                       <TyperComponent
                         strings={[
                           t("Web Designer."),
-                          t("Web Developer."),
+                          t("Front-end Developer."),
                           t("UI/UX Designer."),
-                          t("Freelancer."),
-                          t("Content Writer."),
+                          t("Content Creator."),
                         ]}
                       />
                     </span>
