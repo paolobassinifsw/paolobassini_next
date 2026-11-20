@@ -3,13 +3,13 @@ import { useTranslator } from "@/i18n/LocaleProvider";
 import { menuItems } from "@/data/menu";
 import { closeMobilemenu } from "@/utlis/toggleMobilemenu";
 import Link from "@/i18n/LocalizedLink";
-import { stripPathLocale } from "@/i18n/paths";
+import { getRoutePath } from "@/i18n/paths";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function MobileMenu() {
   const t = useTranslator();
-  const pathname = stripPathLocale(usePathname());
+  const pathname = getRoutePath(usePathname());
   const menuRef = useRef(null);
   const innerRef = useRef(null);
   const [activeParent, setActiveParent] = useState(-1);

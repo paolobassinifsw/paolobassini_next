@@ -19,6 +19,12 @@ export function middleware(request) {
     return response;
   }
 
+  const localizedPath = localizePath(url.pathname, locale);
+  if (localizedPath !== url.pathname) {
+    url.pathname = localizedPath;
+    return NextResponse.redirect(url, 308);
+  }
+
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set(localeHeader, locale);
   return NextResponse.next({ request: { headers: requestHeaders } });
